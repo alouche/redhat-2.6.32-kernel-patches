@@ -1,0 +1,8 @@
+
+## Why?
+
+Because life is too short to wait on Redhat to incorporate sweet kernel changes and improvements and because we love the redhat stock kernel :-). 
+
+## Warning
+
+Even though I test every upstream patch I backport and ensure usability and performance, use at your own risks.
