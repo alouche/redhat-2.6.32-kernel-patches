@@ -3,6 +3,22 @@
 
 Because life is too short to wait on Redhat to incorporate sweet kernel changes and improvements and because we love the redhat stock kernel :-). 
 
+The patches can be used to create new custom RPMs.
+
+## How?
+
+I maintain a separate git tree which is commited with every new redhat kernel release, I backport the vanilla upstream patch directly to this tree and generate a diff patch which is then uploaded to this tree. Each patch is set to be used by itself and refer to a single purpose. It may however happen that dependencies are created through multiple patches, if so, the commit message will contain a special instruction.
+
+It can happen that:
+
+- Not all changes from upstream are incorporated
+- That some structure within the redhat stock kernel are modified to adjust to new declarations within the vanilla stack (i.e: network, fs etc.)
+
+Commits:
+
+- Messages will refer to which initial kernel version, the diff patch was generated against (just for ref)
+- Patches may be altered to reflect new redhat minior revision releases (so read the commits for the patch you are interested in)
+
 ## Warning
 
 Even though I test every upstream patch I backport and ensure usability and performance, use at your own risks.
